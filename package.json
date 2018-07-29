@@ -12,11 +12,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "standard \"src/**/*.{js,jsx}\"",
-    "lint:fix": "standard --fix \"src/**/*.{js,jsx}\""
+    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint:fix": "yarn lint:scripts:fix && yarn lint:styles:fix",
+    "lint:scripts": "standard \"src/**/*.{js,jsx}\"",
+    "lint:scripts:fix": "standard --fix \"src/**/*.{js,jsx}\"",
+    "lint:styles": "stylelint src/**/*.css",
+    "lint:styles:fix": "stylelint src/**/*.css --fix"
   },
   "devDependencies": {
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "stylelint": "^9.4.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-order": "^0.8.1"
   },
   "standard": {
     "env": [
