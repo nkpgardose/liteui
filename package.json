@@ -25,11 +25,17 @@
   "devDependencies": {
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",
+    "husky": "^1.0.0-rc.13",
     "react-styleguidist": "^7.2.1",
     "standard": "^11.0.1",
     "stylelint": "^9.4.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-order": "^0.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
   },
   "standard": {
     "env": [
