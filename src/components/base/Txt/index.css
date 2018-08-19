@@ -1,0 +1,77 @@
+/*
+* 1. Font smoothing using grayscale will fix the Font weight for firefox.
+* 2. antialiased and grayscale will sync up Font weights for chrome and firefox.
+*/
+.BodyTxt,
+.Heading,
+.Sub,
+.Hero,
+.Lead {
+  color: var(--texts);
+  font-family: var(--primary-family);
+  -moz-osx-font-smoothing: grayscale; /* 1 */
+  -webkit-font-smoothing: antialiased; /* 2 */
+}
+
+.BodyTxt {
+  font-size: .875rem;
+  line-height: 1.4rem;
+  margin: 0 0 1rem 0;
+}
+
+.Heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin: 0 0 .5rem 0;
+}
+
+.Sub {
+  color: var(--texts-dim);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  margin: 0 0 1rem 0;
+}
+
+.Hero {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 3.36rem;
+  margin: 0 0 1rem 0;
+}
+
+.Lead {
+  color: var(--texts-dim);
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 2.73rem;
+  margin: 0 0 1rem 0;
+}
+
+@media only screen and (min-width: 47.875em) {
+  .BodyTxt {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .Heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .Sub {
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+
+  .Hero {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
+  
+  .Lead {
+    font-size: 3.2rem;
+    line-height: 3.36rem;
+  }
+}

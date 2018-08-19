@@ -18,7 +18,7 @@ const defaultProps = {
 
 function Btn ({size, children, onClick, disabled}) {
   const classNames = `Btn ${size}`.trim()
-  return <button className={classNames} onClick={onClick} disabled>{children}</button>
+  return <button className={classNames} onClick={onClick} disabled={disabled}>{children}</button>
 }
 
 Btn.propTypes = propTypes
