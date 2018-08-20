@@ -1,3 +1,65 @@
 .Btn {
-  margin: 0 0 10px 0;
+  align-items: center;
+  -webkit-appearance: none;
+  background-color: var(--bgs);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-family: var(--primary-family);
+  font-weight: 500;
+  height: 1.375rem;
+  justify-content: center;
+  line-height: inherit;
+  margin: 0 .5rem .5rem 0;
+  min-width: 4rem;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: none;
+  vertical-align: middle;
+}
+
+.Btn.primary {
+  background-color: var(--primary-dim);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.Btn.accent {
+  background-color: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.Btn.xsm {
+  min-width: 2rem;
+}
+
+.Btn.sm {
+  min-width: 3rem;
+}
+
+.Btn.lg {
+  height: 1.71875rem;
+  min-width: 5rem;
+}
+
+.Btn.xlg {
+  height: 2.0625rem;
+  min-width: 6rem;
+}
+
+.Btn:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+  pointer-events: none;
+}
+
+.Btn:hover:enabled,
+.Btn:active:enabled {
+  cursor: pointer;
+  filter: brightness(.7);
 }
