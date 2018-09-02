@@ -14,8 +14,8 @@
 }
 
 .BodyTxt {
-  font-size: .875rem;
-  line-height: 1.4rem;
+  font-size: .875rem; /* 14px */
+  line-height: 1.5rem; /* 24px */
   margin: 0 0 1rem 0;
 }
 
@@ -35,24 +35,23 @@
 }
 
 .Hero {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 500;
-  line-height: 3.36rem;
+  line-height: 3.5rem;
   margin: 0 0 1rem 0;
 }
 
 .Lead {
   color: var(--texts-dim);
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  line-height: 2.73rem;
+  line-height: 3rem;
   margin: 0 0 1rem 0;
 }
 
 @media only screen and (min-width: 47.875em) {
   .BodyTxt {
     font-size: 1rem;
-    line-height: 1.6rem;
   }
 
   .Heading {
@@ -61,17 +60,17 @@
   }
 
   .Sub {
-    font-size: 1.625rem;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 
   .Hero {
     font-size: 4rem;
-    line-height: 4.2rem;
+    line-height: 4.5rem;
   }
   
   .Lead {
-    font-size: 3.2rem;
-    line-height: 3.36rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 }
