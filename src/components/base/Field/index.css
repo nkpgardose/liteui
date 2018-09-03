@@ -1,0 +1,76 @@
+/**
+  * 1. Reset field on mobile safari.
+  * 2. Remove built-in border radius.
+  */
+.Field {
+  display: inline-block;
+  font-family: var(--primary-family);
+  margin: 0 .5rem 1rem 0;
+  vertical-align: top;
+}
+
+.Field > .label,
+.Field > .error {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 500;
+  margin: 0 0 .25rem 0;
+  text-transform: uppercase;
+}
+
+.Field > .input {
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: 2px; /* 2 */
+  box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: var(--primary-family);
+  font-size: 1rem;
+  font-weight: 300;
+  height: 2.5rem;
+  outline-color: var(--border);
+  padding: .5rem;
+  transition: outline-color .3s ease-in;
+  will-change: outline-color;
+}
+
+.Field > textarea.input {
+  height: 4rem;
+}
+
+.Field > .input:focus {
+  outline: var(--primary) solid 2px;
+}
+
+.Field > .label {
+  color: var(--texts-dim);
+}
+
+.Field.widen,
+.Field.block {
+  display: block;
+}
+
+.Field.widen > .input {
+  width: 100%;
+}
+
+.Field > .error {
+  color: var(--accent);
+}
+
+.Field.error > .input {
+  border-color: var(--accent);
+}
+
+.Field.error > .input:focus {
+  outline-color: var(--accent);
+}
+
+/** TODO: Separate this to different file */
+.uInlineMiddleItems {
+  align-items: center;
+  display: inline-flex;
+  vertical-align: middle;
+}

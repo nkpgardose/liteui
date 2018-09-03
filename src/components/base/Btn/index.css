@@ -3,16 +3,17 @@
   -webkit-appearance: none;
   background-color: var(--bgs);
   border: 1px solid var(--border);
-  border-radius: 3px;
+  border-radius: 2px;
+  box-shadow: var(--shadow) 0px 1px 2px;
   box-sizing: border-box;
   display: inline-flex;
   font-family: var(--primary-family);
   font-weight: 500;
-  height: 1.375rem;
+  height: 2.5rem;
   justify-content: center;
   line-height: inherit;
-  margin: 0 .5rem .5rem 0;
-  min-width: 4rem;
+  margin: 0 .5rem 1rem 0;
+  min-width: 5rem;
   outline: none;
   overflow: hidden;
   position: relative;
@@ -34,6 +35,11 @@
   color: var(--accent);
 }
 
+.Btn.xsm,
+.Btn.sm {
+  height: 1.5rem;
+}
+
 .Btn.xsm {
   min-width: 2rem;
 }
@@ -43,13 +49,13 @@
 }
 
 .Btn.lg {
-  height: 1.71875rem;
-  min-width: 5rem;
+  height: 3rem;
+  min-width: 8rem;
 }
 
 .Btn.xlg {
-  height: 2.0625rem;
-  min-width: 6rem;
+  height: 3.5rem;
+  min-width: 10rem;
 }
 
 .Btn:disabled {
@@ -61,5 +67,5 @@
 .Btn:hover:enabled,
 .Btn:active:enabled {
   cursor: pointer;
-  filter: brightness(.7);
+  filter: brightness(.85);
 }
