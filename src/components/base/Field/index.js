@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import './../../../index.css'
+import './../Field/index.css'
+
 const propTypes = {
-  modifier: PropTypes.string,
+  modifiers: PropTypes.string,
   errorMsg: PropTypes.string,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
@@ -13,7 +16,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  modifier: '',
+  modifiers: '',
   errorMsg: '',
   required: false,
   disabled: false,
@@ -31,21 +34,43 @@ class Field extends Component {
     this.props.onFieldChange(value)
   }
 
+  renderInput () {
+    const { name, type, required, disabled } = this.props
+    switch (type) {
+      case 'textarea':
+        return (
+          <textarea
+            className='input'
+            name={name}
+            id={name}
+            required={required}
+            disabled={disabled}
+            onChange={this.onFieldChange}
+          />
+        )
+      default:
+        return (
+          <input
+            className='input'
+            name={name}
+            id={name}
+            type={type}
+            required={required}
+            disabled={disabled}
+            onChange={this.onFieldChange}
+          />
+        )
+    }
+  }
+
   render () {
-    const { modifier, errorMsg, name, label, type, required, disabled } = this.props
-    const classNames = `Field ${errorMsg ? 'error' : ''} ${modifier}`.replace(/\s+/g, ' ').trim()
+    const { modifiers, errorMsg, name, label } = this.props
+    const classNames = `Field ${errorMsg ? 'error' : ''} ${modifiers}`.replace(/\s+/g, ' ').trim()
 
     return (
       <div className={classNames}>
         <label className='label' htmlFor={name}>{label}</label>
-        <input
-          className='input'
-          name={name} id={name}
-          type={type}
-          required={required}
-          disabled={disabled}
-          onChange={this.onFieldChange}
-        />
+        {this.renderInput()}
         {errorMsg ? <span className='error'>{errorMsg}</span> : null}
       </div>
     )
