@@ -64,7 +64,7 @@
 
 ## Want to Contribute?
 
-If you found a bug, or have any questions. Do post an (issue)[https://github.com/nkpgardose/liteui/issues]. :heart: :tada:
+If you found a bug, or have any questions. Do post an [issue](https://github.com/nkpgardose/liteui/issues). :heart: :tada
 
 Want to contribute? Do pull request :heart: :bow:
 
