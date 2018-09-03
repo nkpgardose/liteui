@@ -47,24 +47,32 @@
 
   - Starts the development server.
 
+- `yarn start:styleguide`
+
+  - Starts the styleguidist server
+
 - `yarn build`
 
   - Bundles the app into static files for production.
 
 - `yarn test`
 
-  - Starts the test runner.
+  - Run the whole test once.
+
+- `yarn test:watch`
+
+  - Starts the test runner
 
 - `yarn lint`
 
   - Checks code for any violations of the prettier rules.
 
-- `yarn lint-fix`
+- `yarn lint:fix`
   - Fixes code violations automatically.
 
 ## Want to Contribute?
 
-If you found a bug, or have any questions. Do post an [issue](https://github.com/nkpgardose/liteui/issues). :heart: :tada
+If you found a bug, or have any questions. Do post an [issue](https://github.com/nkpgardose/liteui/issues). :heart: :tada:
 
 Want to contribute? Do pull request :heart: :bow:
 
