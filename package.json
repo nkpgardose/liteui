@@ -1,7 +1,12 @@
 {
   "name": "liteui",
   "version": "0.1.0",
-  "private": true,
+  "description": "A set of lightweight styles & react components.",
+  "repository": "nkpgardose/liteui",
+  "homepage": "https://github.com/nkpgardose/liteui#readme",
+  "author": "Neil Kim Gardose",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
