@@ -7,9 +7,9 @@
   --texts-dim: rgba(39, 45, 45, .75);
   --selected: rgb(39, 45, 45, .1);
   --border: rgba(39, 45, 45, .40);
-  --primary: rgb(111, 115, 210);
-  --secondary: rgb(229, 99, 153);
-  --primary-dim: rgba(111, 115, 210, .05);
-  --secondary-dim: rgba(229, 99, 153, .05);
+  --primary: rgb(0, 144, 234);
+  --secondary: rgb(255, 64, 128);
+  --primary-dim: rgba(0, 144, 234, .05);
+  --secondary-dim: rgba(255, 64, 128, .05);
   --shadow: rgba(39, 45, 45, .1);
 }
