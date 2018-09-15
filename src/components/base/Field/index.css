@@ -57,15 +57,15 @@
 }
 
 .Field > .error {
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 .Field.error > .input {
-  border-color: var(--accent);
+  border-color: var(--secondary);
 }
 
 .Field.error > .input:focus {
-  outline-color: var(--accent);
+  outline-color: var(--secondary);
 }
 
 /** TODO: Separate this to different file */

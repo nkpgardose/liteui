@@ -16,8 +16,8 @@ A base component that styled up button element with necessary props on it.
 <Btn disabled>Submit</Btn>
 <Btn modifiers="primary">Submit</Btn>
 <Btn modifiers="primary" disabled>Submit</Btn>
-<Btn modifiers="accent">Submit</Btn>
-<Btn modifiers="accent" disabled>Submit</Btn>
+<Btn modifiers="secondary">Submit</Btn>
+<Btn modifiers="secondary" disabled>Submit</Btn>
 ```
 
 **Misc**
@@ -41,10 +41,10 @@ A base component that styled up button element with necessary props on it.
 ```
 
 ```js
-<Btn  modifiers="accent" size="xsm">Ok</Btn>
-<Btn  modifiers="accent" size="sm">Submit</Btn>
-<Btn modifiers="accent" >Submit</Btn>
-<Btn  modifiers="accent" size="lg">Submit</Btn>
-<Btn  modifiers="accent" size="xlg">Submit</Btn>
-<Btn  modifiers="accent" disabled>Submit</Btn>
+<Btn  modifiers="secondary" size="xsm">Ok</Btn>
+<Btn  modifiers="secondary" size="sm">Submit</Btn>
+<Btn modifiers="secondary" >Submit</Btn>
+<Btn  modifiers="secondary" size="lg">Submit</Btn>
+<Btn  modifiers="secondary" size="xlg">Submit</Btn>
+<Btn  modifiers="secondary" disabled>Submit</Btn>
 ```

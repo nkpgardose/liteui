@@ -8,8 +8,8 @@
   --selected: rgb(39, 45, 45, .1);
   --border: rgba(39, 45, 45, .40);
   --primary: rgb(111, 115, 210);
-  --accent: rgb(229, 99, 153);
+  --secondary: rgb(229, 99, 153);
   --primary-dim: rgba(111, 115, 210, .05);
-  --accent-dim: rgba(229, 99, 153, .05);
+  --secondary-dim: rgba(229, 99, 153, .05);
   --shadow: rgba(39, 45, 45, .1);
 }
