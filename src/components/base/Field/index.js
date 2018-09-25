@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import './../../../index.css'
-import './../Field/index.css'
+import './index.css'
 
 const propTypes = {
   modifiers: PropTypes.string,

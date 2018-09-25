@@ -20,7 +20,7 @@
 
 .Field > .input {
   appearance: none;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: 2px; /* 2 */
   box-shadow: none;
   box-sizing: border-box;
@@ -29,6 +29,8 @@
   font-size: 1rem;
   font-weight: 300;
   height: 2.5rem;
+  margin-left: 0;
+  margin-right: 0;
   outline-color: var(--border);
   padding: .5rem;
   transition: outline-color .3s ease-in;
@@ -58,6 +60,11 @@
 
 .Field > .error {
   color: var(--secondary);
+  margin-bottom: .25rem;
+}
+
+.Field.error {
+  margin-bottom: 0;
 }
 
 .Field.error > .input {
