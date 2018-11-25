@@ -7,20 +7,26 @@ import './index.css'
 const propTypes = {
   modifiers: PropTypes.string,
   errorMsg: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   required: PropTypes.bool,
   disabled: PropTypes.bool,
-  onFieldChange: PropTypes.func
+  autoFocus: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  onFieldChange: PropTypes.func.isRequired
 }
 
 const defaultProps = {
+  value: '',
   modifiers: '',
   errorMsg: '',
   required: false,
   disabled: false,
-  onFieldChange (value) {}
+  autoFocus: false
 }
 
 class Field extends Component {
@@ -35,29 +41,34 @@ class Field extends Component {
   }
 
   renderInput () {
-    const { name, type, required, disabled } = this.props
+    const { name, type, required, disabled, value, autoFocus } = this.props
+
     switch (type) {
       case 'textarea':
         return (
           <textarea
             className='input'
+            value={value}
             name={name}
             id={name}
             required={required}
             disabled={disabled}
             onChange={this.onFieldChange}
+            autoFocus={autoFocus}
           />
         )
       default:
         return (
           <input
             className='input'
+            value={value}
             name={name}
             id={name}
             type={type}
             required={required}
             disabled={disabled}
             onChange={this.onFieldChange}
+            autoFocus={autoFocus}
           />
         )
     }
