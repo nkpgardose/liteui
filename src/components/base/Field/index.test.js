@@ -11,7 +11,8 @@ describe('Field', () => {
      */
     name: 'field',
     label: 'A sample field',
-    type: 'text'
+    type: 'text',
+    onFieldChange () {}
   }
 
   it('renders without crashing', () => {
@@ -20,26 +21,38 @@ describe('Field', () => {
 
   it('simulate field change', () => {
     const onFieldChange = sinon.spy()
-    const wrapper = mount(<Field onFieldChange={onFieldChange} {...defaultProps} />)
+    const wrapper = mount(<Field {...defaultProps} onFieldChange={onFieldChange} />)
+
     wrapper.find('input')
       .simulate('change', {
         target: {value: 'sample'}
       })
+
     expect(onFieldChange.called).toBe(true)
   })
 
   it('renders given modifiers on field', () => {
     const wrapper = shallow(<Field modifiers='sample' {...defaultProps}>Click Me!</Field>)
+
     expect(wrapper.is('.sample')).toBe(true)
   })
 
   it('renders error element', () => {
-    const wrapper = shallow(<Field errorMsg='sample error message' {...defaultProps}>Click Me!</Field>)
+    const wrapper = shallow(
+      <Field
+        errorMsg='sample error message'
+        {...defaultProps}
+      >
+        Click Me!
+      </Field>
+    )
+
     expect(wrapper.is('.error')).toBe(true)
   })
 
   it('renders textarea element', () => {
     const wrapper = shallow(<Field {...defaultProps} type='textarea'>Click Me!</Field>)
+
     expect(wrapper.containsAnyMatchingElements([<textarea />])).toBe(true)
   })
 })
